@@ -13,14 +13,14 @@ void selection_sort(int *array, size_t size)
 size_t i, j = 0;
 size_t index;
 int min;
-for (i = 0; i < size - 1 ; i++)
-{
-index  = i;
-min  =  array[i];
 if (size == 0)
 {
 return;
 }
+for (i = 0; i < size - 1 ; i++)
+{
+index  = i;
+min  =  array[i];
 for (j = i + 1; j < size ; j++)
 {
 if (min > array[j])
