@@ -17,6 +17,10 @@ for (i = 0; i < size - 1 ; i++)
 {
 index  = i;
 min  =  array[i];
+if (size == 0)
+{
+return;
+}
 for (j = i + 1; j < size ; j++)
 {
 if (min > array[j])
