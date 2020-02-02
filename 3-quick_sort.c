@@ -4,6 +4,7 @@
  * swap - swap two elements of array
  * @a: first element
  * @b: second element
+ * @array: array to dislay
  */
 
 void swap(int *a, int *b, size_t size, int *array)
