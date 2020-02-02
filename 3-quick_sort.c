@@ -95,6 +95,4 @@ void quick_sort(int *array, size_t size)
 	test_sorted = check_sorted(array, size);
 	if (test_sorted == 0)
 		quick(array, 0, size - 1, size);
-	else
-		print_array(array, size);
 }
