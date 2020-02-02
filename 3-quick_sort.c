@@ -6,11 +6,12 @@
  * @b: second element
  */
 
-void swap(int *a, int *b)
+void swap(int *a, int *b, size_t size, int *array)
 {
 	int tmp = *a;
 	*a = *b;
 	*b = tmp;
+	print_array(array, size);
 }
 
 /**
@@ -32,11 +33,10 @@ int partition(int array[], int start, int end, size_t size)
 		if (array[j] < pivot)
 		{
 			i++;
-			swap(&array[i], &array[j]);
+			swap(&array[i], &array[j], size, array);
 		}
 	}
-	swap(&array[i + 1], &array[end]);
-	print_array(array, size);
+	swap(&array[i + 1], &array[end], size, array);
 	return (i + 1);
 }
 
