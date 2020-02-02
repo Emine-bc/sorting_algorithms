@@ -4,6 +4,7 @@
  * swap - swap two elements of array
  * @a: first element
  * @b: second element
+ * @size: size of array
  * @array: array to dislay
  */
 
