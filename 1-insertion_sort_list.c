@@ -49,7 +49,7 @@ void swap(listint_t **unsorted, listint_t **sorted, listint_t **list)
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *unsorted_node, *sorted_node;
-	
+
 	if (*list == NULL)
 		return;
 	unsorted_node = (*list)->next;
