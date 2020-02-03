@@ -51,6 +51,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *unsorted_node, *sorted_node;
 
 	if (!list || !(*list) || (*list)->next)
+		return;
 	unsorted_node = (*list)->next;
 	while (unsorted_node != NULL && check_sorted(*list) != 1)
 	{
