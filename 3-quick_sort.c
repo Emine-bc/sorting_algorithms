@@ -4,16 +4,13 @@
  * swap - swap two elements of array
  * @a: first element
  * @b: second element
- * @size: size of array
- * @array: array to dislay
  */
 
-void swap(int *a, int *b, size_t size, int *array)
+void swap(int *a, int *b)
 {
 	int tmp = *a;
 	*a = *b;
 	*b = tmp;
-	print_array(array, size);
 }
 
 /**
@@ -35,10 +32,18 @@ int partition(int array[], int start, int end, size_t size)
 		if (array[j] < pivot)
 		{
 			i++;
-			swap(&array[i], &array[j], size, array);
+			if (array[i] != array[j])
+			{
+				swap(&array[i], &array[j]);
+				print_array(array, size);
+			}
 		}
 	}
-	swap(&array[i + 1], &array[end], size, array);
+	if (array[i + 1] != array[end])
+	{
+		swap(&array[i + 1], &array[end]);
+		print_array(array, size);
+	}
 	return (i + 1);
 }
 
