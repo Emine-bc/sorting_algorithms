@@ -13,7 +13,7 @@ int check_sorted(listint_t *head)
 	if (head == NULL || head->next == NULL)
 		return (1);
 
-	return (head->n > head->next->n &&
+	return (head->n < head->next->n &&
 			check_sorted(head->next));
 }
 
