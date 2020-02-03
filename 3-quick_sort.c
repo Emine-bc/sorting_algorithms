@@ -90,8 +90,11 @@ void quick(int array[], int start, int end, size_t size)
 
 void quick_sort(int *array, size_t size)
 {
+
 	int test_sorted;
 
+	if (size < 2)
+	return;
 	test_sorted = check_sorted(array, size);
 	if (test_sorted == 0)
 		quick(array, 0, size - 1, size);
