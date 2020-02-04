@@ -23,10 +23,7 @@ max = array[i];
 copy = malloc(sizeof(int) * size);
 cmp = malloc(sizeof(int) * (max + 1));
 if (cmp == NULL || copy == NULL)
-{
-free(copy);
 return;
-}
 for (i = 0; i < size; i++)
 cmp[array[i]] += 1;
 for (k = 0; k <= max; k++)
@@ -34,15 +31,4 @@ for (k = 0; k <= max; k++)
 x = cmp[k];
 cmp[k] += al;
 al += x;
-}
-print_array(cmp, max + 1);
-for (i = 0; i < size; i++)
-{
-copy[cmp[array[i]] - 1] = array[i];
-cmp[array[i]] -= 1;
-}
-for (i = 0; i < size; i++)
-array[i] = copy[i];
-free(cmp);
-free(copy);
 }
