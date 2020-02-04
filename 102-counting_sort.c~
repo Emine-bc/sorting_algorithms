@@ -9,13 +9,11 @@
 void counting_sort(int *array, size_t size)
 {
 size_t i;
-int max = array[0];
-int x, al = 0, k;
-int *cmp = NULL;
-int *copy = NULL;
+int max = array[0], x, al = 0, k;
+int *cmp = NULL, *copy = NULL;
 if (array == NULL)
 return;
-for (i = 0; i < size; i++)
+for(i = 0; i < size; i++)
 {
 if (array[i] > max)
 max = array[i];
@@ -23,10 +21,7 @@ max = array[i];
 copy = malloc(sizeof(int) * size);
 cmp = malloc(sizeof(int) * (max + 1));
 if (cmp == NULL || copy == NULL)
-{
-free(copy);
 return;
-}
 for (i = 0; i < size; i++)
 cmp[array[i]] += 1;
 for (k = 0; k <= max; k++)
@@ -43,6 +38,4 @@ cmp[array[i]] -= 1;
 }
 for (i = 0; i < size; i++)
 array[i] = copy[i];
-free(cmp);
-free(copy);
 }
